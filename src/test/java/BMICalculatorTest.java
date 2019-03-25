@@ -13,12 +13,12 @@ import static org.junit.Assert.*;
         @Test
         @Parameters({"70, 180, Normalny", "50, 183, ",
                 "90, 175, nadwaga", "150, 17, otyłość", "180, 15, otyłość"})
-        public void testDifferentBMI(double weight, double height, String bmiStatus) {
-            double bmiExpectedResult = weight / Math.pow(height, 2)*10000;
+        public void testDifferentBMI(double masa, double wzrost, String bmiStatus) {
+            double bmiExpectedResult = masa / Math.pow(wzrost, 2)*10000;
             String expected = String.format("Your BMI is: %.2f", bmiExpectedResult);
             String expectedInterpretation = String.format("You're %s", bmiStatus);
 
-            BMICalculator bmi = new BMICalculator(height, weight);
+            BMICalculator bmi = new BMICalculator(wzrost, masa);
             String bmiActualResult = bmi.calculate();
             String bmiActualInterpretation = bmi.interpret();
 
@@ -28,7 +28,7 @@ import static org.junit.Assert.*;
 
         @Test(expected = IllegalArgumentException.class)
         public void belowZero() {
-            BMICalculator bmi = new BMICalculator(0, -1);
+            BMICalculator bmi = new BMICalculator(11,0);
         }
 
     }

@@ -2,10 +2,10 @@ package calculate;
 
 public class BMICalculator implements Calculator {
 
-    private int weight;
-    private int height;
+    private double masa;
+    private double wzrost;
 
-    public BMICalculator(int height, int wwight) {
+    public BMICalculator(double masa, double wzrost) {
 
 
     }

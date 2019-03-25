@@ -6,7 +6,7 @@ public class Main {
 
         Scanner userInput = new Scanner(System.in);
 
-        System.out.print("Podaj twoj wzrost w Cm: ");
+        System.out.print("Podaj twoj wzrost w cm: ");
 
         double wzrost = userInput.nextInt();
 
